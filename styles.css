@@ -1,0 +1,107 @@
+.destruct {
+  font-family: "Tektur", cursive;
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.destruct h2 {
+  font-size: 70px;
+  color: gold;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.destruct h3 {
+  font-size: 50px;
+  color: rgb(231, 19, 29);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.destruct .square {
+  height: 360px;
+  width: 360px;
+  border: 20px solid rgb(10, 27, 87);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.destruct .tl-corner,
+.destruct .br-corner {
+  width: 250px;
+  height: 250px;
+  border: 30px solid rgb(79, 6, 105);
+  position: absolute;
+  filter: drop-shadow(0 0 5px #333);
+  transition: transform 0.3s ease;
+}
+
+.destruct .tl-corner {
+  top: -10px;
+  left: -10px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: translate3d(-25px, -25px, 100px);
+}
+
+.destruct .br-corner {
+  bottom: -10px;
+  right: -10px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: translate3d(25px, 25px, 100px);
+}
+
+.destruct {
+  perspective: 500px;
+}
+
+.destruct .tl-corner {
+  transform: translate3d(-25px, -25px, 100px);
+}
+
+.destruct .br-corner {
+  transform: translate3d(25px, 25px, 100px);
+}
+
+.destruct .square {
+  transform: translateZ(-300px);
+}
+
+.destruct h2 {
+  transform: translate3d(-25px, -35px, 100px);
+}
+
+.destruct h3 {
+  transform: translate3d(100px, 40px, 100px);
+}
+
+.destruct:hover h2 {
+  transform: translate3d(0, 0, 0);
+}
+
+.destruct:hover h3 {
+  transform: translate3d(0, 0, 0);
+}
+
+.destruct:hover .tl-corner {
+  transform: translate3d(0, 0, 0);
+}
+
+.destruct:hover .br-corner {
+  transform: translate3d(0, 0, 0);
+}
+
+.destruct:hover .square {
+  transform: translate3d(0, 0, 0);
+}
